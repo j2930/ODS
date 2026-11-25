@@ -1,0 +1,296 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* MENU */
+
+header {
+    background-color: #ffffff;
+    padding: 18px 6%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #c62845;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c62845;
+}
+
+
+/* BANNER */
+
+.banner {
+    min-height: 450px;
+    background: linear-gradient(
+        rgba(125, 15, 43, 0.82),
+        rgba(198, 40, 69, 0.82)
+    );
+
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+}
+
+.banner-content {
+    max-width: 650px;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: white;
+    color: #c62845;
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #f5dce2;
+    transform: scale(1.05);
+}
+
+
+/* SEÇÕES */
+
+section {
+    padding: 70px 8%;
+    text-align: center;
+    scroll-margin-top: 85px;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #b71c3b;
+    margin-bottom: 25px;
+}
+
+section p {
+    font-size: 16px;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    background-color: white;
+}
+
+.sobre p {
+    max-width: 850px;
+    margin: 15px auto;
+    color: #555;
+}
+
+
+/* CARDS */
+
+.atuacao {
+    background-color: #fff3f5;
+}
+
+.exames {
+    background-color: white;
+}
+
+.prevencao {
+    background-color: #fff3f5;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px 22px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card span {
+    font-size: 40px;
+}
+
+.card h3 {
+    color: #c62845;
+    margin: 15px 0;
+}
+
+.card p {
+    color: #666;
+}
+
+
+/* BENEFÍCIOS */
+
+.beneficios {
+    background-color: white;
+}
+
+.beneficios-lista {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    text-align: left;
+}
+
+.beneficios-lista div {
+    background-color: #fff3f5;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.beneficios-lista h3 {
+    color: #b71c3b;
+    margin-bottom: 10px;
+}
+
+
+/* CONTATO */
+
+.contato {
+    background-color: #a91e3b;
+    color: white;
+}
+
+.contato h2 {
+    color: white;
+}
+
+.contato p {
+    margin-bottom: 25px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #202c3b;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer p {
+    margin: 7px;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h1 {
+        font-size: 35px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+}
